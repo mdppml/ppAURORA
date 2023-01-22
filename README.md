@@ -1,12 +1,14 @@
 # ppAURORA
 
-ppAURORA aims to compute the area under curve (AUC). In this study, we use ppAURORA to compute the AUC of the receiver operating characteristic (ROC) curve (AUROC) and precision-recall (PR) curve (AUPR). ppAURORA bases on a 3-party computation framework, called CECILIA, which offers a variety of building blocks to facilitate more complex algorithms in a privacy preserving manner. Both are implemented in C++.
+ppAURORA aims to compute the area under curve (AUC). In this study, we use ppAURORA to compute the AUC of the receiver operating characteristic (ROC) curve (AUROC) and precision-recall (PR) curve (AUPR). ppAURORA is based on a 3-party computation framework, called CECILIA, which offers a variety of building blocks to facilitate more complex algorithms in a privacy preserving manner. The project is implemented in C++.
 
 ## Installation
 
 No installation is required.
 
 ## Compiling
+
+We strongly recommend using cmake to compile the project. To manually compile the project, the followings should help.
 
 ### Helper
 
@@ -19,7 +21,7 @@ c++ -std=gnu++17 -pthread -W -O3 apps/helper.cpp -o helper
 #### proxy_auroc
 
 ```bash
-c++ -std=gnu++17 -pthread -W -O3 apps/auroc/proxy.cpp core/Party.h utils/constant.h utils/auc_utils.h utils/parse_options.cpp utils/parse_options.h utils/connection.h utils/flib.h utils/llib.h -o proxy_auroc
+c++ -std=gnu++17 -pthread -W -O3 apps/auroc/proxy.cpp core/Party.h utils/constant.h utils/auc_utils.h utils/parse_options.cpp utils/parse_options.h utils/connection.h utils/flib.h utils/llib.h core/auc.h -o proxy_auroc
 ```
 
 ### AUROC WITH TIE
@@ -27,21 +29,15 @@ c++ -std=gnu++17 -pthread -W -O3 apps/auroc/proxy.cpp core/Party.h utils/constan
 #### proxy_auroc_tie
 
 ```bash
-c++ -std=gnu++17 -pthread -W -O3 apps/auroctie/proxy.cpp core/Party.h utils/constant.h utils/auc_utils.h utils/parse_options.cpp utils/parse_options.h utils/connection.h utils/flib.h -o proxy_auroc_tie
+c++ -std=gnu++17 -pthread -W -O3 apps/auroctie/proxy.cpp core/Party.h utils/constant.h utils/auc_utils.h utils/parse_options.cpp utils/parse_options.h utils/connection.h utils/flib.h core/auc.h -o proxy_auroc_tie
 ```
 
-### AUPRC
+### AUPR
 
-#### helper
+#### proxy_aupr
 
-```bash
-c++ -std=gnu++17 -pthread -W -O3 examples/aupr/proxy.cpp core/Party.cpp core/Party.h utils/constant.h utils/parse_options.cpp utils/parse_options.h utils/connection.h utils/flib.h examples/aupr/llib.h -o proxy_aupr
-```
-
-#### proxy
-
-```bash
-c++ -std=gnu++17 -pthread -W -O3 apps/helper.cpp core/Party.cpp core/Party.h utils/constant.h utils/parse_options.cpp utils/parse_options.h utils/connection.h utils/flib.h -o helper_aupr
+```proxy_aupr
+c++ -std=gnu++17 -pthread -W -O3 examples/aupr/proxy.cpp core/Party.cpp core/Party.h utils/constant.h utils/auc_utils.h utils/parse_options.cpp utils/parse_options.h utils/connection.h utils/flib.h examples/aupr/llib.h core/auc.h -o proxy_aupr
 ```
 
 ## Usage
