@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.9"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "CECILIA",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "helper::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-helper-Debug-ef5c2e0a12908583fab2.json",
+					"name" : "helper",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "proxy_aupr::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-proxy_aupr-Debug-3e3f9523c3bda4eac35e.json",
+					"name" : "proxy_aupr",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "proxy_auroc::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-proxy_auroc-Debug-58fb6f0f626cb222150c.json",
+					"name" : "proxy_auroc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "proxy_auroc_tie::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-proxy_auroc_tie-Debug-f4beb6b49c3720ffafc4.json",
+					"name" : "proxy_auroc_tie",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/aliburak/Projects/ppAURORA/cmake-build-debug",
+		"source" : "/Users/aliburak/Projects/ppAURORA"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

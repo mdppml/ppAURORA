@@ -1,0 +1,13 @@
+# ninja log v5
+3	1093	1674416551808478816	CMakeFiles/proxy_auroc_tie.dir/apps/auroctie/proxy.cpp.o	810b9cdbcfdd08db
+2	1084	1674416551799764309	CMakeFiles/proxy_auroc.dir/apps/auroc/proxy.cpp.o	9babcb5003281f8c
+0	3	0	clean	3c8e6cc385ee00ba
+1076	1108	1674416551825457624	helper	dbd8fec4c993a1df
+1093	1123	1674416551840643480	proxy_auroc_tie	a4ba84ee0f09f7de
+1085	1115	1674416551832991344	proxy_auroc	e28f732300a33c9e
+303	588	1674414810674325993	CMakeFiles/proxy_aupr.dir/utils/parse_options.cpp.o	fea882f6a6c502a4
+1091	1121	1674416551838663238	proxy_aupr	bf971a7bb7eb0d17
+4	305	1674414810392022852	CMakeFiles/proxy_auroc_tie.dir/utils/parse_options.cpp.o	dfd3d65377845dc1
+3	303	1674414810389553641	CMakeFiles/proxy_auroc.dir/utils/parse_options.cpp.o	3449766e9c8376ff
+2	1076	1674416551791138718	CMakeFiles/helper.dir/apps/helper.cpp.o	d030db27354be252
+3	1091	1674416551805912201	CMakeFiles/proxy_aupr.dir/apps/aupr/proxy.cpp.o	493ee757615087e2

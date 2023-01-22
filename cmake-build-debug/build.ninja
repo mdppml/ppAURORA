@@ -1,0 +1,250 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: CECILIA
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/aliburak/Projects/ppAURORA/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target helper
+
+
+#############################################
+# Order-only phony target for helper
+
+build cmake_object_order_depends_target_helper: phony || CMakeFiles/helper.dir
+
+build CMakeFiles/helper.dir/apps/helper.cpp.o: CXX_COMPILER__helper_Debug /Users/aliburak/Projects/ppAURORA/apps/helper.cpp || cmake_object_order_depends_target_helper
+  DEP_FILE = CMakeFiles/helper.dir/apps/helper.cpp.o.d
+  FLAGS = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/helper.dir
+  OBJECT_FILE_DIR = CMakeFiles/helper.dir/apps
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target helper
+
+
+#############################################
+# Link the executable helper
+
+build helper: CXX_EXECUTABLE_LINKER__helper_Debug CMakeFiles/helper.dir/apps/helper.cpp.o
+  FLAGS = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  OBJECT_DIR = CMakeFiles/helper.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = helper
+  TARGET_PDB = helper.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target proxy_auroc
+
+
+#############################################
+# Order-only phony target for proxy_auroc
+
+build cmake_object_order_depends_target_proxy_auroc: phony || CMakeFiles/proxy_auroc.dir
+
+build CMakeFiles/proxy_auroc.dir/apps/auroc/proxy.cpp.o: CXX_COMPILER__proxy_auroc_Debug /Users/aliburak/Projects/ppAURORA/apps/auroc/proxy.cpp || cmake_object_order_depends_target_proxy_auroc
+  DEP_FILE = CMakeFiles/proxy_auroc.dir/apps/auroc/proxy.cpp.o.d
+  FLAGS = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/proxy_auroc.dir
+  OBJECT_FILE_DIR = CMakeFiles/proxy_auroc.dir/apps/auroc
+
+build CMakeFiles/proxy_auroc.dir/utils/parse_options.cpp.o: CXX_COMPILER__proxy_auroc_Debug /Users/aliburak/Projects/ppAURORA/utils/parse_options.cpp || cmake_object_order_depends_target_proxy_auroc
+  DEP_FILE = CMakeFiles/proxy_auroc.dir/utils/parse_options.cpp.o.d
+  FLAGS = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/proxy_auroc.dir
+  OBJECT_FILE_DIR = CMakeFiles/proxy_auroc.dir/utils
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target proxy_auroc
+
+
+#############################################
+# Link the executable proxy_auroc
+
+build proxy_auroc: CXX_EXECUTABLE_LINKER__proxy_auroc_Debug CMakeFiles/proxy_auroc.dir/apps/auroc/proxy.cpp.o CMakeFiles/proxy_auroc.dir/utils/parse_options.cpp.o
+  FLAGS = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  OBJECT_DIR = CMakeFiles/proxy_auroc.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = proxy_auroc
+  TARGET_PDB = proxy_auroc.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target proxy_auroc_tie
+
+
+#############################################
+# Order-only phony target for proxy_auroc_tie
+
+build cmake_object_order_depends_target_proxy_auroc_tie: phony || CMakeFiles/proxy_auroc_tie.dir
+
+build CMakeFiles/proxy_auroc_tie.dir/apps/auroctie/proxy.cpp.o: CXX_COMPILER__proxy_auroc_tie_Debug /Users/aliburak/Projects/ppAURORA/apps/auroctie/proxy.cpp || cmake_object_order_depends_target_proxy_auroc_tie
+  DEP_FILE = CMakeFiles/proxy_auroc_tie.dir/apps/auroctie/proxy.cpp.o.d
+  FLAGS = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/proxy_auroc_tie.dir
+  OBJECT_FILE_DIR = CMakeFiles/proxy_auroc_tie.dir/apps/auroctie
+
+build CMakeFiles/proxy_auroc_tie.dir/utils/parse_options.cpp.o: CXX_COMPILER__proxy_auroc_tie_Debug /Users/aliburak/Projects/ppAURORA/utils/parse_options.cpp || cmake_object_order_depends_target_proxy_auroc_tie
+  DEP_FILE = CMakeFiles/proxy_auroc_tie.dir/utils/parse_options.cpp.o.d
+  FLAGS = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/proxy_auroc_tie.dir
+  OBJECT_FILE_DIR = CMakeFiles/proxy_auroc_tie.dir/utils
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target proxy_auroc_tie
+
+
+#############################################
+# Link the executable proxy_auroc_tie
+
+build proxy_auroc_tie: CXX_EXECUTABLE_LINKER__proxy_auroc_tie_Debug CMakeFiles/proxy_auroc_tie.dir/apps/auroctie/proxy.cpp.o CMakeFiles/proxy_auroc_tie.dir/utils/parse_options.cpp.o
+  FLAGS = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  OBJECT_DIR = CMakeFiles/proxy_auroc_tie.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = proxy_auroc_tie
+  TARGET_PDB = proxy_auroc_tie.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target proxy_aupr
+
+
+#############################################
+# Order-only phony target for proxy_aupr
+
+build cmake_object_order_depends_target_proxy_aupr: phony || CMakeFiles/proxy_aupr.dir
+
+build CMakeFiles/proxy_aupr.dir/apps/aupr/proxy.cpp.o: CXX_COMPILER__proxy_aupr_Debug /Users/aliburak/Projects/ppAURORA/apps/aupr/proxy.cpp || cmake_object_order_depends_target_proxy_aupr
+  DEP_FILE = CMakeFiles/proxy_aupr.dir/apps/aupr/proxy.cpp.o.d
+  FLAGS = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/proxy_aupr.dir
+  OBJECT_FILE_DIR = CMakeFiles/proxy_aupr.dir/apps/aupr
+
+build CMakeFiles/proxy_aupr.dir/utils/parse_options.cpp.o: CXX_COMPILER__proxy_aupr_Debug /Users/aliburak/Projects/ppAURORA/utils/parse_options.cpp || cmake_object_order_depends_target_proxy_aupr
+  DEP_FILE = CMakeFiles/proxy_aupr.dir/utils/parse_options.cpp.o.d
+  FLAGS = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/proxy_aupr.dir
+  OBJECT_FILE_DIR = CMakeFiles/proxy_aupr.dir/utils
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target proxy_aupr
+
+
+#############################################
+# Link the executable proxy_aupr
+
+build proxy_aupr: CXX_EXECUTABLE_LINKER__proxy_aupr_Debug CMakeFiles/proxy_aupr.dir/apps/aupr/proxy.cpp.o CMakeFiles/proxy_aupr.dir/utils/parse_options.cpp.o
+  FLAGS = -O3 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.1.sdk -mmacosx-version-min=13.0
+  OBJECT_DIR = CMakeFiles/proxy_aupr.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = proxy_aupr
+  TARGET_PDB = proxy_aupr.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/aliburak/Projects/ppAURORA/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/aliburak/Projects/ppAURORA/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/aliburak/Projects/ppAURORA -B/Users/aliburak/Projects/ppAURORA/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/aliburak/Projects/ppAURORA/cmake-build-debug
+
+build all: phony helper proxy_auroc proxy_auroc_tie proxy_aupr
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Users/aliburak/Projects/ppAURORA/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Users/aliburak/Projects/ppAURORA/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
